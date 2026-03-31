@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 490" width="680" height="490">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-dim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#c8c6c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="490" fill="#ffffff"/>
+
+  <!-- HEADER -->
+  <rect x="40" y="16" width="600" height="34" rx="8" fill="#f5f4f0" stroke="#c8c6c0" stroke-width="0.8"/>
+  <text x="340" y="33" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#2c2c2a" font-weight="600" font-family="'Courier New', monospace" letter-spacing="3">DATA PIPELINE</text>
+
+  <!-- PHASE LABELS -->
+  <text x="118" y="72" text-anchor="middle" font-size="11" fill="#888780" font-family="system-ui, sans-serif">Extracción</text>
+  <text x="310" y="72" text-anchor="middle" font-size="11" fill="#888780" font-family="system-ui, sans-serif">Transformación</text>
+  <text x="558" y="72" text-anchor="middle" font-size="11" fill="#888780" font-family="system-ui, sans-serif">Carga</text>
+  <line x1="50"  y1="82" x2="195" y2="82" stroke="#e0ddd6" stroke-width="0.8"/>
+  <line x1="215" y1="82" x2="415" y2="82" stroke="#e0ddd6" stroke-width="0.8"/>
+  <line x1="435" y1="82" x2="630" y2="82" stroke="#e0ddd6" stroke-width="0.8"/>
+
+  <!-- bcra.ipynb wrapper -->
+  <rect x="44" y="92" width="388" height="360" rx="10" fill="none" stroke="#c8c6c0" stroke-width="0.8" stroke-dasharray="5 3"/>
+  <text x="238" y="110" text-anchor="middle" font-size="10" fill="#888780" font-family="'Courier New', monospace">bcra.ipynb</text>
+
+  <!-- WEB SCRAPING — activo -->
+  <rect x="58" y="120" width="148" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
+  <text x="132" y="140" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#712B13" font-weight="600" font-family="system-ui, sans-serif">Web scraping</text>
+  <text x="132" y="158" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#993C1D" font-family="system-ui, sans-serif">endpoint no doc.</text>
+  <rect x="62" y="112" width="88" height="13" rx="4" fill="#993C1D"/>
+  <text x="106" y="120" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#FAECE7" font-family="'Courier New', monospace">api-plazos-fijos.php</text>
+
+  <!-- API OFICIAL — activa -->
+  <rect x="58" y="196" width="148" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.8"/>
+  <text x="132" y="216" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#085041" font-weight="600" font-family="system-ui, sans-serif">API oficial BCRA</text>
+  <text x="132" y="234" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#0F6E56" font-family="system-ui, sans-serif">estadísticas monetarias</text>
+  <rect x="62" y="188" width="64" height="13" rx="4" fill="#0F6E56"/>
+  <text x="94" y="196" text-anchor="middle" dominant-baseline="central" font-size="7.5" fill="#E1F5EE" font-family="system-ui, sans-serif">documentada</text>
+
+  <!-- PFIJO CSV — futuro -->
+  <rect x="58" y="272" width="148" height="56" rx="8" fill="none" stroke="#c8c6c0" stroke-width="0.8" stroke-dasharray="5 3"/>
+  <text x="132" y="292" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#b4b2a9" font-family="system-ui, sans-serif">BCRA</text>
+  <text x="132" y="310" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#b4b2a9" font-family="'Courier New', monospace">PFIJO_BCRA.csv</text>
+
+  <!-- Arrows activas → transform -->
+  <line x1="208" y1="148" x2="228" y2="188" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="208" y1="224" x2="228" y2="210" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow CSV input → transform (dim) -->
+  <line x1="208" y1="300" x2="228" y2="268" stroke="#c8c6c0" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- TRANSFORMACIÓN -->
+  <rect x="232" y="120" width="186" height="244" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
+  <text x="325" y="142" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#26215C" font-weight="600" font-family="system-ui, sans-serif">Python / pandas</text>
+  <line x1="250" y1="155" x2="404" y2="155" stroke="#534AB7" stroke-width="0.5" opacity="0.4"/>
+  <text x="250" y="176" dominant-baseline="central" font-size="10" fill="#3C3489" font-family="system-ui, sans-serif">— Agrega fecha</text>
+  <text x="250" y="200" dominant-baseline="central" font-size="10" fill="#3C3489" font-family="system-ui, sans-serif">— Limpieza de datos</text>
+  <text x="250" y="224" dominant-baseline="central" font-size="10" fill="#3C3489" font-family="system-ui, sans-serif">— Cálculo de spread</text>
+  <text x="250" y="248" dominant-baseline="central" font-size="10" fill="#3C3489" font-family="system-ui, sans-serif">— Guarda en SQLite</text>
+
+  <!-- Arrow pandas → SQLite -->
+  <line x1="420" y1="148" x2="450" y2="148" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- SQLite — activo -->
+  <rect x="452" y="120" width="162" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.8"/>
+  <text x="533" y="140" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#2C2C2A" font-weight="600" font-family="system-ui, sans-serif">SQLite</text>
+  <text x="533" y="158" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#5F5E5A" font-family="'Courier New', monospace">tasas_bancos.db</text>
+
+  <!-- Arrow SQLite → CSV export (dim) -->
+  <line x1="533" y1="178" x2="533" y2="202" stroke="#c8c6c0" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- CSV EXPORT — futuro -->
+  <rect x="452" y="206" width="162" height="56" rx="8" fill="none" stroke="#c8c6c0" stroke-width="0.8" stroke-dasharray="5 3"/>
+  <text x="533" y="226" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#b4b2a9" font-family="system-ui, sans-serif">CSV export</text>
+  <text x="533" y="244" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#b4b2a9" font-family="'Courier New', monospace">tasas_bancos.csv</text>
+
+  <!-- Arrow CSV → Dashboard (dim) -->
+  <line x1="533" y1="264" x2="533" y2="288" stroke="#c8c6c0" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-dim)"/>
+
+  <!-- DASHBOARD — futuro -->
+  <rect x="452" y="292" width="162" height="56" rx="8" fill="none" stroke="#c8c6c0" stroke-width="0.8" stroke-dasharray="5 3"/>
+  <text x="533" y="312" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#b4b2a9" font-family="system-ui, sans-serif">Dashboard</text>
+  <text x="533" y="330" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#b4b2a9" font-family="system-ui, sans-serif">Tableau</text>
+
+  <!-- File bar -->
+  <rect x="44" y="464" width="388" height="22" rx="6" fill="none" stroke="#e0ddd6" stroke-width="0.8" stroke-dasharray="4 3"/>
+  <text x="238" y="476" text-anchor="middle" dominant-baseline="central" font-size="9" fill="#888780" font-family="'Courier New', monospace">bcra.ipynb  ·  tasas_bancos.db</text>
+
+  <!-- LEYENDA -->
+  <line x1="452" y1="476" x2="480" y2="476" stroke="#888780" stroke-width="1.2"/>
+  <text x="486" y="476" dominant-baseline="central" font-size="9" fill="#5F5E5A" font-family="system-ui, sans-serif">actual</text>
+  <line x1="524" y1="476" x2="552" y2="476" stroke="#c8c6c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="558" y="476" dominant-baseline="central" font-size="9" fill="#b4b2a9" font-family="system-ui, sans-serif">próximamente</text>
+</svg>
