@@ -2,11 +2,7 @@ name: ETL Diario — Tasas Plazo Fijo BCRA
 
 on:
   schedule:
-    # Corre todos los días a las 18:00 UTC (15:00 hora Argentina)
-    # Los bancos ya publicaron sus tasas a esa hora
-    - cron: "0 18 * * *"
-  
-  # Permite ejecución manual desde GitHub
+    - cron: "22 1 * * *"
   workflow_dispatch:
 
 jobs:
@@ -20,7 +16,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Instalar dependencias
         run: pip install pandas requests
@@ -34,4 +30,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add tasas_bancos.db
           git diff --cached --quiet || git commit -m "Actualización diaria — $(date -u +%Y-%m-%d)"
-          git push
+          git pull --rebase
+          git push 

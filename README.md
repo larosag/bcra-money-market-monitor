@@ -67,7 +67,7 @@ El proyecto integra **dos fuentes principales de datos financieros**.
 El pipeline sigue una **arquitectura modular tipo ELT**
 
 <p align="center">
-  <img src="diagrams/data_pipeline.svg" width="900">
+  <img src="Diagrams/data_pipeline.svg" width="900">
 </p> 
 
 ## 📁 Estructura del repositorio
